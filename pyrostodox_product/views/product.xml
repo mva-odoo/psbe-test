@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pyrostodox_product_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.product.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='barcode']" position="after">
+                <field name="oem"/>
+                <field name="upc"/>
+                <field name="manufacturer_id"/>
+                <field name="is_available"/>
+                <field name="date_available"/>
+            </xpath>
+            <xpath expr="//field[@name='description']/.." position="before">
+                <group>
+                    <group>
+                        <field name="public_price"/>
+                        <field name="public_price_dif1"/>
+                        <field name="public_price_dif2"/>
+                        <field name="public_price_dif3"/>
+                        <field name="public_price_dif4"/>
+                        <field name="no_tax_price"/>
+                    </group>
+                    <group>
+                        <field name="page"/>
+                        <field name="origin"/>
+                        <field name="weight"/>
+                        <field name="fam_web"/>
+                        <field name="compatibility"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
