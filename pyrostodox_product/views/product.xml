@@ -15,17 +15,46 @@
             <xpath expr="//field[@name='description']/.." position="before">
                 <group>
                     <group>
-                        <field name="public_price"/>
-                        <field name="public_price_dif1"/>
-                        <field name="public_price_dif2"/>
-                        <field name="public_price_dif3"/>
-                        <field name="public_price_dif4"/>
-                        <field name="no_tax_price"/>
+                        <label for="public_price" string="Retail USD" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="public_price"/>
+                            <field name="public_price_currency_id"/>
+                        </div>
+                        <label for="public_price_dif1" string="Dealer Price EUR" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="public_price_dif1"/>
+                            <field name="public_price_dif1_currency_id"/>
+                        </div>
+                        <label for="public_price_dif2" string="Dealer Price EUR / Dropshipment" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="public_price_dif2"/>
+                            <field name="public_price_dif2_currency_id"/>
+                        </div>
+                        <label for="public_price_dif3" string="Tarif 3" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="public_price_dif3"/>
+                            <field name="public_price_dif3_currency_id"/>
+                        </div>
+                        <label for="public_price_dif4" string="Tarif 4" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="public_price_dif4"/>
+                            <field name="public_price_dif4_currency_id"/>
+                        </div>
+                        <label for="no_tax_price" string="Retail EUR" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="no_tax_price"/>
+                            <field name="no_tax_price_currency_id"/>
+                        </div>
                     </group>
                     <group>
+                        <field name="link"/>
                         <field name="page"/>
                         <field name="origin"/>
-                        <field name="weight"/>
+                        <label for="weight" string="Weight" modifiers="{}"/>
+                        <div class="o_row" modifiers="{}">
+                            <field name="weight"/>
+                            <field name="weight_unit"/>
+                        </div>
                         <field name="fam_web"/>
                         <field name="compatibility"/>
                     </group>
